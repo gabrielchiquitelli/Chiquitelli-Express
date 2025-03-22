@@ -31,6 +31,8 @@
 #footer .row {
     align-items: center !important; /* Centraliza o conteúdo verticalmente */
     gap: 10px; /* Reduz espaço entre colunas */
+    flex-direction: column; /* Empilha os itens no mobile */
+    text-align: center; /* Centraliza os textos */
 }
 
 #footer hr {
@@ -40,6 +42,55 @@
 .copyright {
     padding: 2px 0 !important; /* Reduz espaço na parte de baixo */
     font-size: 15px; /* Diminui o tamanho do texto do copyright */
+}
+
+@media (max-width: 768px) {
+  #footer .row {
+      flex-direction: column; /* Empilha os itens no mobile */
+      align-items: center; /* Centraliza os conteúdos */
+      text-align: center; 
+  }
+
+  #footer .col-md-6, 
+  #footer .col-lg-3, 
+  #footer .col-lg-2 {
+      width: 100%; /* Faz as colunas ocuparem a largura total */
+      margin-bottom: 20px; /* Adiciona espaço entre as seções */
+  }
+
+  #footer .logo img {
+      max-width: 120px; /* Reduz a logo para caber melhor */
+      margin-bottom: 10px;
+  }
+
+  #footer nav ul {
+      padding: 0;
+  }
+
+  #footer .copyright p {
+      font-size: 14px; /* Ajusta o tamanho da fonte */
+      text-align: center;
+  }
+}
+
+/* Para garantir que no PC não mude nada */
+@media (min-width: 769px) {
+  #footer .row {
+      flex-direction: row; /* Mantém a disposição horizontal no PC */
+      justify-content: space-between;
+      text-align: left;
+  }
+
+  #footer .col-md-6, 
+  #footer .col-lg-3, 
+  #footer .col-lg-2 {
+      width: auto; /* Mantém os tamanhos normais no PC */
+      margin-bottom: 0;
+  }
+
+  #footer .logo img {
+      max-width: 180px; /* Garante que a logo volte ao tamanho correto */
+  }
 }
 
 
