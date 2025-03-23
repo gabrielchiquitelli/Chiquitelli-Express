@@ -785,4 +785,18 @@ a.blog-read:hover {
   border-bottom: 1px solid #8a8a8a;
 }
 
+#collection {
+  text-align: center;
+}
+.collection-item {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+.text {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 8px;
+}
+
 
