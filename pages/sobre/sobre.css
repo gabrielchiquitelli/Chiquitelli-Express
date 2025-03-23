@@ -40,7 +40,7 @@
 }
 
 .copyright {
-    padding: 2px 0 !important; /* Reduz espaço na parte de baixo */
+    padding: 1px 0 !important; /* Reduz espaço na parte de baixo */
     font-size: 15px; /* Diminui o tamanho do texto do copyright */
 }
 
@@ -56,11 +56,6 @@
   #footer .col-lg-2 {
       width: 100%; /* Faz as colunas ocuparem a largura total */
       margin-bottom: 20px; /* Adiciona espaço entre as seções */
-  }
-
-  #footer .logo img {
-      max-width: 120px; /* Reduz a logo para caber melhor */
-      margin-bottom: 10px;
   }
 
   #footer nav ul {
@@ -86,10 +81,6 @@
   #footer .col-lg-2 {
       width: auto; /* Mantém os tamanhos normais no PC */
       margin-bottom: 0;
-  }
-
-  #footer .logo img {
-      max-width: 180px; /* Garante que a logo volte ao tamanho correto */
   }
 }
 

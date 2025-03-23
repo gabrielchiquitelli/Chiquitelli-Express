@@ -1,55 +1,3 @@
-/*
-Theme Name: Modish
-Theme URI: https://templatesjungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: Modish is specially designed product packaged for clothing eCommerce website.
-Version: 1.1
-*/
-
-/*--------------------------------------------------------------
-This is main CSS file that contains custom style rules used in this template
---------------------------------------------------------------*/
-
-/*------------------------------------*\
-    Table of contents
-\*------------------------------------*/
-
-/*------------------------------------------------
-
-CSS STRUCTURE:
-
-1. VARIABLES
-
-2. GENERAL TYPOGRAPHY
-  2.1 General Styles
-  2.2 Background Color
-  2.3 Section
-    - Section Paddings
-    - Section Margins
-    - Section Title
-  2.4 Buttons
-    - Buttons
-    - Button Hover Effect
-
-3. CONTENT ELEMENTS
-  - Dropdown
-  - Form
-  - Display
-  - Svg Color
-  - Swiper
-  - Modal Video
-  - Search Popup
-
-4. SITE STRUCTURE
-  4.1 Header Section
-  4.2 New-Arrival Section
-  4.3 Video Section
-
-
-/*--------------------------------------------------------------
-/** 1. VARIABLES
---------------------------------------------------------------*/
 :root {
   --primary-color: #111111;
   --secondary-color: #F9F6F3;
@@ -60,13 +8,78 @@ CSS STRUCTURE:
   --gray-color: #777F81;
   --light-color: #fdfdfd;
 
-  /* bootstrap color-scheme */
   --bs-dark-rgb: 80, 80, 80;
   --bs-gray-100: #EAE5DD;
   --bs-gray-300: #DCDCDC;
   --bs-body-color-rgb: 53, 53, 53;
   --bs-primary-rgb: 17, 17, 17;
   --bs-secondary-rgb: 249, 246, 243;
+}
+#footer {
+  padding: 40px 0 !important; /* Reduz o espaço interno */
+  min-height: auto !important; /* Remove altura mínima fixa */
+  font-size: 14px; /* Diminui a fonte */
+}
+
+#footer .container {
+  max-width: 85% !important; /* Deixa o footer mais compacto */
+  padding: 10px 0 !important; /* Ajusta o espaçamento interno */
+}
+
+#footer .row {
+  align-items: center !important; /* Centraliza o conteúdo verticalmente */
+  gap: 10px; /* Reduz espaço entre colunas */
+  flex-direction: column; /* Empilha os itens no mobile */
+  text-align: center; /* Centraliza os textos */
+}
+
+#footer hr {
+  margin: 5px 0 !important; /* Diminui espaço da linha separadora */
+}
+
+.copyright {
+  padding: 1px 0 !important; /* Reduz espaço na parte de baixo */
+  font-size: 15px; /* Diminui o tamanho do texto do copyright */
+}
+
+@media (max-width: 768px) {
+#footer .row {
+    flex-direction: column; /* Empilha os itens no mobile */
+    align-items: center; /* Centraliza os conteúdos */
+    text-align: center; 
+}
+
+#footer .col-md-6, 
+#footer .col-lg-3, 
+#footer .col-lg-2 {
+    width: 100%; /* Faz as colunas ocuparem a largura total */
+    margin-bottom: 20px; /* Adiciona espaço entre as seções */
+}
+
+#footer nav ul {
+    padding: 0;
+}
+
+#footer .copyright p {
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+    text-align: center;
+}
+}
+
+/* Para garantir que no PC não mude nada */
+@media (min-width: 769px) {
+#footer .row {
+    flex-direction: row; /* Mantém a disposição horizontal no PC */
+    justify-content: space-between;
+    text-align: left;
+}
+
+#footer .col-md-6, 
+#footer .col-lg-3, 
+#footer .col-lg-2 {
+    width: auto; /* Mantém os tamanhos normais no PC */
+    margin-bottom: 0;
+}
 }
 
 .navbar-brand img{
@@ -84,13 +97,6 @@ CSS STRUCTURE:
   --body-font: "Merriweather", serif;
   --heading-font: "Work Sans", sans-serif;
 }
-
-/*----------------------------------------------*/
-/* 2 GENERAL TYPOGRAPHY
-  /*----------------------------------------------*/
-
-/* 2.1 General Styles
-  /*----------------------------------------------*/
 *,
 *::before,
 *::after {
@@ -124,8 +130,6 @@ a:hover {
 }
 
 
-/* 2.2 Background Color
-/*----------------------------------------------*/
 .bg-light {
   background-color: var(--light-color) !important;
 }
@@ -138,11 +142,7 @@ a:hover {
   background-color: var(--bs-gray-100) !important;
 }
 
-/*--------------------------------------------------------------
-  /** 2.3 Section
-  --------------------------------------------------------------*/
-/* - Section Padding
-  --------------------------------------------------------------*/
+
 .padding-small {
   padding-top: 5em;
   padding-bottom: 5em;
@@ -170,8 +170,6 @@ a:hover {
   }
 }
 
-/* - Section Margin
-  --------------------------------------------------------------*/
 .margin-small {
   margin-top: 8.125em;
   margin-bottom: 8.125em;
@@ -188,8 +186,6 @@ a:hover {
 }
 
 
-/* - Section Title
-  --------------------------------------------------------------*/
 h1,
 h2,
 h3,
@@ -212,13 +208,6 @@ h6 {
 }
 
 
-
-/*--------------------------------------------------------------
-  /** 2.4 Buttons
-  --------------------------------------------------------------*/
-
-/* - Button
-  --------------------------------------------------------------*/
 .btn {
   --bs-btn-padding-x: 2.5rem;
   --bs-btn-padding-y: 0.6rem;
@@ -231,8 +220,6 @@ h6 {
   letter-spacing: 0.1rem;
 }
 
-/* - Button Hover Effect
-  --------------------------------------------------------------*/
 .btn1 {
   border: none;
   transition: 0.5s ease-in-out;
@@ -263,12 +250,6 @@ h6 {
   width: 100%;
 }
 
-/*--------------------------------------------------------------
-  /** 3.CONTENT ELEMENTS
-  --------------------------------------------------------------*/
-
-/* Dropdown
-  ------------------------------------------------------------- */
 .dropdown-item {
   color: var(--dark-color);
   text-transform: capitalize;
@@ -281,8 +262,6 @@ h6 {
   background-color: var(--secondary-color);
 }
 
-/* Form
-  ------------------------------------------------------------- */
 .form-control:focus,
 .form-select:focus {
   border-color: var(--dark-color);
@@ -316,7 +295,6 @@ select:focus {
   box-shadow: none;
 }
 
-/* ------ Pagination ------*/
 .pagination .page-numbers {
   width: 30px;
   height: 30px;
@@ -329,8 +307,6 @@ select:focus {
   border-radius: 8px;
 }
 
-/* Svg Color
-  ------------------------------------------------------------- */
 svg.light-color {
   color: var(--light-color);
 }
@@ -343,10 +319,6 @@ svg.primary-color {
   color: var(--primary-color);
 }
 
-/* Swiper
-------------------------------------------------------------- */
-
-/* new arrival */
 .main-slider-button-next.swiper-button-disabled,
 .main-slider-button-prev.swiper-button-disabled {
   opacity: .35;
@@ -372,8 +344,6 @@ svg.primary-color {
 }
 
 
-/* modal video override
-------------------------------------------------------------- */
 .modal-dialog {
   max-width: 800px;
   margin: auto;
@@ -390,8 +360,6 @@ svg.primary-color {
 }
 
 
-/** Search Popup
---------------------------------------------------------------*/
 .search-popup {
   background-color: #fff;
   position: fixed;
@@ -588,12 +556,6 @@ svg.primary-color {
   width: 28px;
 }
 
-/*----------------------------------------------*/
-/* 4 SITE STRUCTURE */
-/*----------------------------------------------*/
-
-/** 4.1 Header Section Style
---------------------------------------------------------------*/
 
 .nav-link {
   font-size: 16px;
@@ -632,8 +594,6 @@ svg.primary-color {
 }
 
 
-/** 4.2 New-Arrival Section Style
---------------------------------------------------------------*/
 .product-item .cart-concern {
   background: var(--light-color);
   width: 70%;
@@ -654,9 +614,6 @@ svg.primary-color {
   opacity: 1;
 }
 
-
-/** 4.3 Video Section Style
---------------------------------------------------------------*/
 .play,
 svg.play-icon {
   animation: play 1.5s alternate infinite ease-in;
@@ -672,7 +629,6 @@ svg.play-icon {
   }
 }
 
-/*----- Shop Section Style -------------------------*/
 .product-store .product-item {
   position: relative;
 }
@@ -717,14 +673,10 @@ svg.play-icon {
   font-size: 1.8em;
 }
 
-/* search bar style  */
 .search-bar {
   border: 1px solid #EAEAEA;
 }
 
-/*--------------------------------------------------------------
-Single Product page style start
---------------------------------------------------------------*/
 
 .nav-tabs .nav-link {
   color: var(--gray-color);
@@ -749,7 +701,6 @@ Single Product page style start
   transition: all 0.1s ease-in;
 }
 
-/* product-thumbnail-slider */
 .product-thumbnail-slider {
   height: 880px;
 }
@@ -771,9 +722,6 @@ a.btn-wishlist {
 }
 
 
-/*--------------------------------------------------------------
-faqs page style start
---------------------------------------------------------------*/
 .accordion-button:not(.collapsed) {
   color: var(--body-text-color);
   background-color: transparent;
@@ -805,10 +753,7 @@ faqs page style start
   box-shadow: none;
 }
 
-/*--------------------------------------------------------------
-Blog page style start
---------------------------------------------------------------*/
-/* blog style */
+
 .card {
   --bs-card-inner-border-radius: none;
   --bs-card-bg: transparent;
