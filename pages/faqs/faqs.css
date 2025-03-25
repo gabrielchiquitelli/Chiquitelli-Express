@@ -17,6 +17,7 @@
 }
 
 
+
 #footer {
   background: var(--primary-color); /* Fundo escuro elegante */
   color: var(--secondary-color); /* Texto em cor contrastante */
@@ -239,5 +240,46 @@ header {
   z-index: 1000;
 }
 
-/* teste */
+main.container {
+  max-width: 90%; /* Aumenta a largura máxima */
+  min-height: 60vh; /* Aumenta a altura mínima para ocupar mais espaço na tela */
+  padding: 40px; /* Adiciona mais espaçamento interno */
+  background-color: white; /* Garante que o fundo fique branco */
+  border-radius: 10px; /* Suaviza os cantos */
+}
 
+.accordion-item {
+  border: 2px solid black !important; /* Garante que cada item tenha uma borda preta */
+  border-radius: 5px; /* Suaviza os cantos */
+  margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--body-text-color);
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.accordion {
+  --bs-accordion-color: var(--light-text-color);
+  --bs-accordion-bg: none;
+  --bs-accordion-btn-color: var(--body-text-color);
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url('https://api.iconify.design/eva/arrow-down-fill.svg?color=%2341403e');
+}
+
+.accordion-button::after {
+  background-image: url('https://api.iconify.design/eva/arrow-down-fill.svg?color=%2341403e');
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  box-shadow: none;
+}

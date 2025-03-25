@@ -1,11 +1,370 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
+    <title>Chiquitelli Express</title>
+    <link rel="icon" type="image/png" href="../../images/logo1.png">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="author" content="templatesjungle">
+    <meta name="keywords" content="electronics gadget">
+    <meta name="description" content="electronics gadget website template">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="faqs.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <h2>teste</h2>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="arrow-left" viewBox="0 0 256 256">
+            <path fill="currentColor"
+                d="M220 128a4 4 0 0 1-4 4H49.66l65.17 65.17a4 4 0 0 1-5.66 5.66l-72-72a4 4 0 0 1 0-5.66l72-72a4 4 0 0 1 5.66 5.66L49.66 124H216a4 4 0 0 1 4 4" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 256 256">
+            <path fill="currentColor"
+                d="m218.83 130.83l-72 72a4 4 0 0 1-5.66-5.66L206.34 132H40a4 4 0 0 1 0-8h166.34l-65.17-65.17a4 4 0 0 1 5.66-5.66l72 72a4 4 0 0 1 0 5.66" />
+        </symbol>
+        
+        <symbol id="expand" viewBox="0 0 32 32">
+            <path fill="currentColor"
+                d="m25.545 23.328l-7.627-7.705l7.616-7.616l1.857 1.857l2.26-8.428l-8.428 2.258l1.836 1.836l-7.603 7.604l-7.513-7.59L9.81 3.695L1.392 1.394l2.215 8.44l1.848-1.83l7.524 7.604l-7.515 7.515l-1.856-1.855l-2.26 8.427l8.43-2.257L7.94 25.6l7.503-7.502l7.614 7.693l-1.867 1.848l8.416 2.3l-2.213-8.438z" />
+        </symbol>
+        
+        <symbol id="play" viewBox="0 0 512 512">
+            <path fill="currentColor" d="m96 448l320-192L96 64z" />
+        </symbol>
+        <symbol id="down" viewBox="0 0 24 24"> 
+            <g fill="none" fill-rule="evenodd">
+                <path
+                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                    d="M13.06 16.06a1.5 1.5 0 0 1-2.12 0l-5.658-5.656a1.5 1.5 0 1 1 2.122-2.121L12 12.879l4.596-4.596a1.5 1.5 0 0 1 2.122 2.12l-5.657 5.658Z" />
+            </g>
+        </symbol>
+        <symbol id="navbar-icon" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 17h18M3 12h18M3 7h18" />
+        </symbol>
+    </svg>
+
+    <div class="search-popup">
+        <div class="search-popup-container">
+
+            <form role="search" method="get" class="form-group" action="">
+                <input type="search" id="search-form" class="form-control border-0 border-bottom"
+                    placeholder="Type and press enter" value="" name="s" />
+                <button type="submit" class="search-submit border-0 position-absolute bg-white"
+                    style="top: 15px;right: 15px;"><svg class="search" width="24" height="24">
+                        <use xlink:href="#search"></use>
+                    </svg></button>
+            </form>
+
+            <h5 class="cat-list-title">Categorias</h5>
+
+            <ul class="cat-list">
+                <li class="cat-list-item mb-3">
+                    <a href="#" title="Product-1">Roupas</a>
+                </li>
+                <li class="cat-list-item mb-3">
+                    <a href="#" title="Product-2">Tecnologia</a>
+                </li>
+                <li class="cat-list-item mb-3">
+                    <a href="#" title="Product-3">Acessorios</a>
+                </li>
+                <li class="cat-list-item mb-3">
+                    <a href="#" title="Product-4">Utensilhos</a>
+                </li>
+                <li class="cat-list-item mb-3">
+                    <a href="#" title="Product-5">Outros</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <header id="header" class="site-header py-3 px-3 px-lg-5 position-absolute top-0 start-0 w-100 z-1">
+        <div class="container-fluid">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler d-flex d-lg-none order-3 p-0 border-0 shadow-none" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <svg class="navbar-icon text-white" width="30" height="30">
+                            <use xlink:href="#navbar-icon"></use>
+                        </svg>
+                    </button>
+                    <a href="../../index.html" class="navbar-brand order-2 order-lg-2 d-flex d-lg-none">
+                      <img src="../../images/logo1.png" alt="Logo">
+
+                  </a>
+                    <div class="offcanvas offcanvas-end bg-black order-3" tabindex="-1" id="bdNavbar"
+                        aria-labelledby="bdNavbarOffcanvasLabel">
+                        <div class="offcanvas-body align-items-center">
+                            <div class="offcanvas-header p-0 py-4 ms-2">
+                                <button type="button" class="btn-close btn-close-white shadow-none"
+                                    data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+                            </div>
+                            <div class="col-md-2 d-flex">
+                                <a href="../../index.html" class="navbar-brand order-2 order-lg-2 d-none d-lg-flex">
+                                    <img src="../../images/logo1.png" alt="Logo">
+                                </a>
+                            </div>
+                            <div class="col-md-5 offset-lg-2">
+                                <div class="navbar-collapse order-1 order-lg-1 ms-3 ms-lg-0" id="navbarMenu">
+                                    <ul class="navbar-nav d-flex justify-content-center">
+                                        <li class="nav-item me-5">
+                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0"
+                                                href="../../index.html">Inicio</a>
+                                        </li>
+                                        <li class="nav-item me-5">
+                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0"
+                                                href="../../pages/sobre/sobre.html">Sobre</a>
+                                        </li>
+
+
+                                        <li class="nav-item me-5 dropdown">
+                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
+                                                href="#" id="navbarDropdownBlog" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Quem Somos ?
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
+                                                <li><a class="dropdown-item" href="../../pages/sobremim e equipe/sobremim.html">Equipe</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="../../pages/sobremim e equipe/sobremim.html">Chiquitelli <span
+                                                            class="badge bg-primary">PRO</span></a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="nav-item me-5 dropdown">
+                                            <a class="nav-link nav-link-ltr text-white pb-1 pe-0 dropdown-toggle"
+                                                href="#" id="navbarDropdownPages" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Paginas
+                                            </a>
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
+                                                <li>
+                                                    <a href="../../pages/sobre/sobre.css" class="dropdown-item">Sobre</a>
+                                                </li>
+                                                 <li>
+                                                    <a href="../../pages/contato/contato.html" class="dropdown-item">Contato </a>
+                                                </li>
+                                                <li>
+                                                    <a href="../../pages/faqs/faqs.html" class="dropdown-item">FAQs </a>
+                                                </li>
+                                                
+                                            </ul>
+                                        </li>
+
+                                        
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <ul
+                                    class="user-items list-unstyled d-none d-lg-flex justify-content-end align-items-center order-3 flex-grow-1 gap-4 m-0">
+                                    <li class="search-item" data-bs-toggle="collapse" data-bs-target="#search-box"
+                                        aria-controls="search-box" aria-expanded="false" aria-label="Toggle navigation">
+                                        <a href="#" class="search-button">
+                                            <svg class="text-white search" width="20" height="20">
+                                                <use xlink:href="#search"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="../../pages/favoritos/favoritos.html" data-bs-toggle="offcanvas"
+                                            data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">
+                                            <svg class="text-white wishlist" width="20" height="20">
+                                                <use xlink:href="#wishlist"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    </li>
+                                    <li>
+                                        <a href="../../pages/conta/conta.html">
+                                            <svg class="text-white man" width="20" height="20">
+                                                <use xlink:href="#man"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <main id="billboard">
+      <div class="position-relative"
+          style="background: url('../../images/sl.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh;">
+          <div class="container">
+            <div class="offset-2 position-absolute top-50 start-0 translate-middle-y">
+                <h2 class="display-1 text-white fw-medium  mt-3"> WiseUp <br> Curso online!</h2>
+            </div>
+          </div>
+      </div>
+  </main>
+
+
+
+  <main class="container mt-5 pt-5">
+    <h1 class="text-center mb-4">PERGUNTAS FREQUENTES: </h1>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    O que é o curso de inglês da WiseUp?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    O curso da WiseUp é um programa de aprendizado de inglês online, voltado para profissionais que precisam do idioma no dia a dia.
+                     Com uma metodologia prática e focada em situações reais do mercado de trabalho, ele acelera o aprendizado de forma eficiente.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Para quem é indicado esse curso?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    O curso é ideal para empresas que desejam capacitar seus colaboradores no idioma inglês,
+                     ajudando-os a se comunicar melhor em reuniões, apresentações, negociações e interações internacionais.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    O curso é 100% online?
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Sim! O curso é totalmente online, permitindo que os alunos estudem no seu próprio ritmo e acessem o conteúdo de qualquer lugar, a qualquer hora.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingeleven">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
+                    Qual é a duração do curso?
+                </button>
+            </h2>
+            <div id="collapseeleven" class="accordion-collapse collapse" aria-labelledby="headingeleven" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    O curso é flexível e pode ser concluído no ritmo do aluno.
+                     No entanto, seguindo o plano sugerido, os colaboradores podem atingir fluência funcional em aproximadamente 12 a 18 meses.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Os alunos recebem certificado ao concluir o curso?
+              </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sim! Ao finalizar o curso e cumprir os requisitos, o aluno recebe um certificado de conclusão, validando seu aprendizado e progresso no inglês.
+              </div>
+          </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Como funciona o suporte aos alunos?
+            </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+               Os alunos contam com suporte para dúvidas e acompanhamento do progresso, garantindo que tenham a melhor experiência e aprendizado durante o curso.
+        </div>
+    </div>
+    </div>
+</main>
+
+
+    <section id="footer" class="bg-black text-white">
+        <div class="container padding-medium">
+            <div class="row">
+
+                <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                    <nav>
+                        <ul class="list-unstyled">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link nav-link-ltr" href="../../pages/sobre/sobre.html">SOBRE</a>
+                            </li>
+                            <li class="nav-item mb-2 ">
+                                <a class="nav-link nav-link-ltr" href="../../pages/loja/loja.html">LOJA</a>
+                            
+                            <li class="nav-item mb-2">
+                                <a class="nav-link nav-link-ltr" href="../../pages/contato/contato.html">AJUDA</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="col-md-6 col-lg-2 mb-3 mb-lg-0">
+                    <nav>
+                        <ul class="list-unstyled">
+                            
+                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="#">INSTAGRAM</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="#">YOUTUBE</a></li>
+                            <li class="nav-item mb-2"><a class="nav-link nav-link-ltr" href="#">PINTEREST</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+                    Alguma dúvida?<br>
+                    <a href="#" class="text-decoration-underline text-white">chiquitelli1607@gmail.com</a><br>
+                    +55 (16) 997135849
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copyright text-center">
+            <p class="m-0 pb-3">© Todos os direitos <a href="https://templatesjungle.com/"
+                    target="_blank" class="text-decoration-underline text-white"> TemplatesJungle</a></p>
+        </div>
+    </section>
+
+
+
+    <!-- Script -->
+    <script src="../../js/jquery-1.11.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/plugins.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+
 </body>
+
+
+
 </html>
