@@ -22,6 +22,7 @@
   color: var(--secondary-color); /* Texto em cor contrastante */
   padding: 60px 0;
   font-size: 14px;
+ 
 }
 
 #footer .container {
@@ -101,13 +102,11 @@
 /* Responsividade */
 @media (max-width: 768px) {
   #footer .row {
-      flex-direction: column;
       text-align: center;
   }
 
   #footer .social-icons {
       justify-content: center;
-      margin-top: 15px;
   }
 }
 
@@ -120,6 +119,12 @@
 .navbar-brand img {
   width: 60px;
   height: auto;
+  margin: 0 auto;
+  position: absolute;
+  left: 10px; /* Define a posição da logo à esquerda */
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%); /* Ajusta a centralização vertical */
+  display: block
 }
 
 body {
@@ -240,4 +245,42 @@ header {
 }
 
 /* teste */
+
+.wiseup-container {
+  max-width: 1100px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); /* Sombra em todos os lados */
+  text-align: center;
+  margin: 50px auto;
+  position: relative;  
+}
+
+.cta2 a {
+  pointer-events: auto;
+  display: inline-block; /* Garante que o link tenha área clicável */
+  padding: 10px 20px; /* Ajusta a área clicável */
+  background-color: #181818; /* Cor do botão */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease-in-out;
+}
+
+.cta2 a:hover {
+  background-color: #424242;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+hr {
+  margin: 0;
+}
+
+
 
